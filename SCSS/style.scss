@@ -1,10 +1,95 @@
-$color: #3cb371;
+$color_tema_oscuro: #2e3531;
+$color_base: #a1a05f;
 
-header{
+$color_fondo_general: #fffbbb;
 
-    height: 20%;
-    #carousel{
-        height: 10%;
+$color_letra_fondo_base: #ffffff;
+$color_letra_fondo_claro: #000000;
+
+$color_letra_footer: #808080;
+@font-face {
+    font-family: "open-dyslexic";
+    src: url("Fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+}
+@font-face {
+    font-family: "open-dyslexic-bold";
+    src: url("Fonts/open_dyslexic/OpenDyslexic-Bold.otf");
+}
+
+.normal-mode {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.dyslexic-mode {
+    font-family: "open-dyslexic";
+}
+
+nav {
+    background-color: $color_base;
+}
+
+header {
+    background-color: $color_base;
+    max-height: 10%;
+    #carousel {
+        .carousel-inner {
+            width: 100%;
+            height: 100vh;
+        }
+
+        padding: 1%;
     }
 }
 
+#principal {
+    padding-top: 5%;
+    background-color: $color_fondo_general;
+    color: $color_letra_fondo_claro;
+    padding-bottom: 3%;
+    text-align: justify;
+
+    &.oscuro {
+        color: $color_letra_fondo_base;
+        background-color: $color_tema_oscuro;
+    }
+
+    aside {
+        margin: 1%;
+        border-radius: 10%;
+        background-color: $color_base;
+        height: fit-content;
+        color: $color_letra_fondo_base;
+    }
+
+    main {
+        article {
+            border: $color_letra_fondo_claro solid 1px;
+        }
+    }
+}
+
+footer {
+    border-top: #000 solid 3px;
+    background-color: $color_fondo_general;
+
+    ul { 
+       
+        text-decoration: none;
+        list-style: none;
+        a {
+            color: #000;
+
+            text-decoration: none;
+        }
+    }
+    &.oscuro {
+        border-top: #fff solid 3px;
+        color: $color_letra_fondo_base;
+        background-color: $color_tema_oscuro;
+        a {
+            color: $color_letra_fondo_base;
+
+            text-decoration: none;
+        }
+    }
+}
